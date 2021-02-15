@@ -4,7 +4,7 @@ let workHours =['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','
 
 
 
-
+let total=0;
 
 let seattle ={
   locationName : 'Seattle',
@@ -13,6 +13,7 @@ let seattle ={
   avgCookieSale:6.3,
   customerPerHour : [],
   cookiesPerHour: [],
+  total : 0,
   updateCusPerHour:function(){
 
     for (let i=0; i<workHours.length;i++){
@@ -22,17 +23,17 @@ let seattle ={
 
   },
 
-
-
-  updatCookiesPerHour :function (){
-
-
+  updatCookiesPerHour:function (){
 
     for (let i=0; i<workHours.length;i++){
 
       this.cookiesPerHour.push(Math.floor(this.customerPerHour[i]*this.avgCookieSale ));
+      total =total + this.cookiesPerHour[i];
+
     }
   },
+
+
 
   structureHtml:function () {
     let bodyEl = document.getElementById('locations');
@@ -44,6 +45,10 @@ let seattle ={
       ulEl.appendChild(liEl);
       liEl.textContent = workHours[i]+':'+this.cookiesPerHour[i];
       console.log (liEl); }
+
+    let liEl= document.createElement('li');
+    ulEl.appendChild(liEl);
+    liEl.textContent= total +'total cookies';
 
   }
 };
@@ -102,6 +107,9 @@ let tokyo ={
       ulEl.appendChild(liEl);
       liEl.textContent = workHours[i]+':'+this.cookiesPerHour[i];
       console.log (liEl); }
+    let liEl= document.createElement('li');
+    ulEl.appendChild(liEl);
+    liEl.textContent= total +'total cookies';
 
   }
 };
@@ -148,7 +156,9 @@ let dubai ={
       ulEl.appendChild(liEl);
       liEl.textContent = workHours[i]+':'+this.cookiesPerHour[i];
       console.log (liEl); }
-
+    let liEl= document.createElement('li');
+    ulEl.appendChild(liEl);
+    liEl.textContent= total +'total cookies';
   }
 };
 
@@ -193,7 +203,9 @@ let paris ={
       ulEl.appendChild(liEl);
       liEl.textContent = workHours[i]+':'+this.cookiesPerHour[i];
       console.log (liEl); }
-
+    let liEl= document.createElement('li');
+    ulEl.appendChild(liEl);
+    liEl.textContent= total +'total cookies';
   }
 };
 
@@ -239,7 +251,9 @@ let lima ={
       ulEl.appendChild(liEl);
       liEl.textContent = workHours[i]+':'+this.cookiesPerHour[i];
       console.log (liEl); }
-
+    let liEl= document.createElement('li');
+    ulEl.appendChild(liEl);
+    liEl.textContent= total +'total cookies';
   }
 };
 
