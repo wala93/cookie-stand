@@ -1,2 +1,2 @@
-table {border-style:solid;border: 0.1cm;color :black,} 
-th,tr {border-style:solid;border: 0.1cm;color :black}
+ body table {border: 0.1cm;border-style:solid;color :black,} 
+ table th {border: 0.05cm;border-style:solid;color :black} 
