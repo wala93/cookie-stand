@@ -266,7 +266,7 @@ function randomValue(min, max) {
 }
 
 
-let totalPerHOUR =[];
+let totalPerHOUR =[0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 let dailyTotal=0;
 let bodyEl = document.getElementById('locations');
 let tableEl=document.createElement('table');
@@ -338,14 +338,15 @@ BranchesLocation.prototype.updatCookiesPerHour= function(){
 
     totalPerHOUR.push(this.cookiesPerHour[i]);
 
-    //dailyTotal=dailyTotal+ this.cookiesPerHour;
+    totalPerHOUR[i]=totalPerHOUR[i] +this.cookiesPerHour[i];
   }
-  //total=total+this.cookiesPerHour[i];
+
   for(let i=0;i<14;i++){
     this.total=this.total+this.cookiesPerHour[i];
   }
-
+  dailyTotal=dailyTotal+this.total;
 };
+
 
 BranchesLocation.prototype.render=function (){
 
