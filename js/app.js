@@ -113,16 +113,17 @@ form.addEventListener('submit',generateNewLocation);
 function generateNewLocation(event){
 
   event.preventDefault();
-  const locationName=event.target.newLocationName.value;
-  console.log(locationName);
-  let minCust=event.target.minCperH.value;
-  minCust= parseInt(minCust);
-  let maxCust=event.target.maxCperH.value;
-  maxCust=parseInt(maxCust);
+  const newLocationName=event.target.newLocationName.value;
+  console.log(newLocationName);
+  let newMinCust=event.target.minCperH.value;
+  newMinCust= parseInt(newMinCust);
+  let newMaxCust=event.target.maxCperH.value;
+  newMaxCust=parseInt(newMaxCust);
   let avgCookieSale=event.target.avgCookiePersale.value;
   avgCookieSale=parseFloat(avgCookieSale);
 
-  let newBranch = new BranchesLocation(minCust,maxCust,avgCookieSale,locationName ) ;
+
+  let newBranch = new BranchesLocation(newMinCust,newMaxCust,avgCookieSale,newLocationName ) ;
 
   tableEl.deleteRow(tableEl.rows.length-1);
   randomValue();
