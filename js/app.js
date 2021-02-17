@@ -124,7 +124,7 @@ function generateNewLocation(event){
 
   let newBranch = new BranchesLocation(minCust,maxCust,avgCookieSale,locationName ) ;
 
-  tableEl.deleteRow(6);
+  tableEl.deleteRow(tableEl.rows.length-1);
   randomValue();
   newBranch.updateCusPerHour();
   newBranch.updatCookiesPerHour();
@@ -135,6 +135,7 @@ function generateNewLocation(event){
 
 
 let seattle = new BranchesLocation(23,65,6.3,'Seattle');
+
 randomValue();
 seattle.updateCusPerHour();
 seattle.updatCookiesPerHour();
