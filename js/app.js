@@ -113,18 +113,19 @@ form.addEventListener('submit',generateNewLocation);
 function generateNewLocation(event){
 
   event.preventDefault();
-  const locationName=event.target.newLocationName.value;
-  console.log(locationName);
-  let minCust=event.target.minCperH.value;
-  minCust= parseInt(minCust);
-  let maxCust=event.target.maxCperH.value;
-  maxCust=parseInt(maxCust);
+  const newLocationName=event.target.newLocationName.value;
+  console.log(newLocationName);
+  let newMinCust=event.target.minCperH.value;
+  newMinCust= parseInt(newMinCust);
+  let newMaxCust=event.target.maxCperH.value;
+  newMaxCust=parseInt(newMaxCust);
   let avgCookieSale=event.target.avgCookiePersale.value;
   avgCookieSale=parseFloat(avgCookieSale);
 
-  let newBranch = new BranchesLocation(minCust,maxCust,avgCookieSale,locationName ) ;
 
-  tableEl.deleteRow(6);
+  let newBranch = new BranchesLocation(newMinCust,newMaxCust,avgCookieSale,newLocationName ) ;
+
+  tableEl.deleteRow(tableEl.rows.length-1);
   randomValue();
   newBranch.updateCusPerHour();
   newBranch.updatCookiesPerHour();
@@ -135,6 +136,7 @@ function generateNewLocation(event){
 
 
 let seattle = new BranchesLocation(23,65,6.3,'Seattle');
+
 randomValue();
 seattle.updateCusPerHour();
 seattle.updatCookiesPerHour();
