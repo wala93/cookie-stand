@@ -1,0 +1,37 @@
+body {background-color: #efefef;}
+header {background-color: #804F69;
+min-height: 2.5cm;}
+
+h1 {position: relative ; top: 1cm;
+    color : #8E6D6E;
+    font-family: Pacifico;
+    font-size: 25px;
+    background-color: #EBE2DE;
+    display :inline;}
+
+
+header nav{ float: right; padding-top: 1.2cm;}
+nav a {font-size:large;}
+
+nav a{margin-left: 20px;
+    margin-right: .2cm;
+text-decoration: none;
+color:#EBE2DE;}
+
+main {margin-left:10%;
+margin-right: 8%;}
+
+main p { font-size: 30px;font-style: oblique;
+font-family: Georgia, 'Times New Roman', Times, serif;
+color: #212034;}
+
+main ul :first-child {font-size: 35px;font-weight: bold;color: #804F69;list-style: none; margin-left: -.5cm;}
+
+.list {font-style: oblique;font-size:25;font-weight: bold;color: #44564A;}
+
+.family {height:480px;width:560;margin-left:3cm;}
+.fish2 {margin-left: 6.5cm;}
+
+footer {background-color: #508164;min-height: 1.3cm;}
+footer p {color: #EBE2DE; font-size: 20px;font-weight: bold;}
+

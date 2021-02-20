@@ -1,2 +1,11 @@
- body table {border: 0.1cm;border-style:solid;color :black,} 
- table th {border: 0.05cm;border-style:solid;color :black} 
+ body table {margin-left:9cm;border-style:solid;color: #804F69;border-collapse: collapse;} 
+ table th {border: 0.05cm;border-style:solid;color :rgb(97, 15, 63)}
+ 
+ body{ background-color:#CFC5A5 ;}
+ a {min-height:.5cm ; color:
+    #804F69;font-size: 35px;font-weight: bold;margin-left:15cm;margin-bottom: 2cm;margin-top: .5cm;}
+
+ header {background-color:#eae3c8; min-height: 3cm;}
+
+ form fieldset {width: 10cm;
+height: 6cm;margin-left:12cm ;background-color: #C6A9A3;}
